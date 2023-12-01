@@ -46,7 +46,7 @@ public class OrganisationHRServiceImpl implements OrganisationHRService {
 
     @Override
     public List<OrganisationHR> findByOrganisationId(int organisationId) {
-        return organisationHRRepository.findByOrganisationId(organisationId);
+        return organisationHRRepository.findByOrganisationOrganisationId(organisationId);
     }
 
 }

@@ -14,7 +14,6 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api")
-@CrossOrigin("http://localhost:3000/")
 public class OrganisationHRController {
     private final OrganisationHRService organisationHRService;
 
@@ -51,12 +50,6 @@ public class OrganisationHRController {
         } catch (DataIntegrityViolationException ex) {
             throw new DuplicateEmailException("Email is already in use", ex);
         }
-    }
-
-    @PutMapping("/organisation-hrs/{organisationHRId}")
-    public OrganisationHR editOrganisationHR(@PathVariable int organisationHRId, @RequestBody OrganisationHR organisationHR) {
-        organisationHR.setOrganisationHRId(organisationHRId);
-        return organisationHRService.save(organisationHR);
     }
 
     @DeleteMapping("/organisation-hrs/{organisationHRId}")

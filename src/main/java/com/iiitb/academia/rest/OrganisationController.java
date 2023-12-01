@@ -11,7 +11,6 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api")
-@CrossOrigin("http://localhost:3000/")
 public class OrganisationController {
     private final OrganisationService organisationService;
 

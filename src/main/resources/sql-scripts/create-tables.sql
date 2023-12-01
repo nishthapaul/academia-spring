@@ -17,6 +17,7 @@ CREATE TABLE IF NOT EXISTS employees (
     title varchar(255),
     photograph_path varchar(255),
     department int,
+    password varchar(255) not null,
     PRIMARY KEY (employee_id)
 );
 
@@ -35,17 +36,4 @@ CREATE TABLE IF NOT EXISTS organisation_hr (
     contact_number varchar(255),
     organisation_id int,
     PRIMARY KEY (organisation_hr_id)
-);
-
-ALTER TABLE employees
-ADD FOREIGN KEY (department) REFERENCES departments(department_id);
-
-ALTER TABLE organisation_hr
-ADD FOREIGN KEY (organisation_id) REFERENCES organisations(organisation_id);
-
-CREATE TABLE IF NOT EXISTS employee_credentials (
-    employee_credentials_id int AUTO_INCREMENT,
-    employee_id int,
-    first_name varchar(255) NOT NULL,
-    PRIMARY KEY (employee_credentials_id)
 );

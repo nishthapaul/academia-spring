@@ -21,16 +21,20 @@ public class Employee {
     private String photographPath;
     @ManyToOne
     @JoinColumn(name = "department")
-    private Department departmentId;
+    private Department department;
+
+    @Column(name = "password")
+    private String password;
 
     public Employee() {}
 
-    public Employee(String firstName, String lastName, String email, String title, String photographPath) {
+    public Employee(String firstName, String lastName, String email, String title, String photographPath, String password) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
         this.title = title;
         this.photographPath = photographPath;
+        this.password = password;
     }
 
     public int getEmployeeId() {
@@ -81,11 +85,19 @@ public class Employee {
         this.photographPath = photographPath;
     }
 
-    public Department getDepartmentId() {
-        return departmentId;
+    public Department getDepartment() {
+        return department;
     }
 
-    public void setDepartmentId(Department departmentId) {
-        this.departmentId = departmentId;
+    public void setDepartment(Department department) {
+        this.department = department;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 }

@@ -10,6 +10,7 @@ import java.util.List;
 
 @Repository
 public interface OrganisationHRRepository extends JpaRepository<OrganisationHR, Integer> {
-    @Query(value = "SELECT * FROM organisation_hr WHERE organisation_id = :organisationId", nativeQuery = true)
-    List<OrganisationHR> findByOrganisationId(@Param("organisationId") int organisationId);
+//    @Query(value = "SELECT * FROM organisation_hr WHERE organisation_id = :organisationId", nativeQuery = true)
+//    List<OrganisationHR> findByOrganisationId(@Param("organisationId") int organisationId);
+    List<OrganisationHR> findByOrganisationOrganisationId(int organisationId);
 }

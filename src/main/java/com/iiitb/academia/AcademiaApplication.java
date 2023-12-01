@@ -11,16 +11,4 @@ public class AcademiaApplication implements RepositoryRestConfigurer {
 		SpringApplication.run(AcademiaApplication.class, args);
 	}
 
-//	@Bean
-//	public CommandLineRunner commandLineRunner(String[] args) {
-//		return runner -> {ø
-//			System.out.println("Hello World");
-//		};
-//	}
-
-//	@Override
-//	public void configureRepositoryRestConfiguration(RepositoryRestConfiguration config, CorsRegistry cors) {
-//		config.exposeIdsFor(Organisation.class);
-//	}
-
 }
